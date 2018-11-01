@@ -1,0 +1,42 @@
+(ns simple.routes
+  (:require
+    [compojure.core :refer [defroutes GET POST]]
+;;    [compojure-simple.route :refer [not-found]]
+    [simple.views :as v]
+;;    [simple.routes :as r]
+    [ring.util.request :as rur]
+    [ring.handler.dump :as rhd]
+    [clojure.java.io :as io]
+;;    [ring.middleware :as m]
+  ))
+(def DEBUG "<br>DEBUG::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br>")
+
+(defn ring.handler.dump---handle-dump
+  [req]
+  (rhd/handle-dump req))
+
+(defn ring.util.request---body-string
+  [req]
+  {:status 200
+   :headers {"Content-Type" "text/html"}
+   :body (rur/body-string req)})
+
+;;  {:status 200
+;;   :headers {"Content-Type" "text/html"}
+;;   :oogie {"a" "b"}
+;;   :body (rhd/handle-dump req)     })
+;;   :body (str   (rur/body-string {:a 1, :b 2}) DEBUG (rhd/handle-dump req)     )})
+;;   :body (str (rhd/handle-dump req) (seq (v/showbody req)) (rur/body-string req))})
+;;   :body (str (:remote-addr req) "<br>" (rur/body-string req) "<br>" (rhd/handle-dump req))})
+
+ (defroutes app
+;;   (GET "/" req (v/main req)) 
+;;   (GET "/get-form.html" req (v/get-form req))
+;;   (GET "/post-form.html" req (v/post-form req))
+;;   (GET "/get-submit" req (v/display-result req))
+;; ;;  (POST "/post-submit" req (doseq [ [k v] req ] (println k v)))
+   (POST "/post-submit" req (ring.util.request---body-string req))
+;; ;;  (POST "/post-submit" req (v/display-result req))
+;; ;;  (not-found (v/not-found)))
+   )
+

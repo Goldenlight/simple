@@ -1,0 +1,1 @@
+(.stop server)(ns-unmap 'simple.core 'server)(load "routes")(load "views")(load "middleware")(load "core")(-main)

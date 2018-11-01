@@ -1,0 +1,17 @@
+(ns simple-compojure.core
+  (require
+    [ring.adapter.jetty :refer [run-jetty]]
+    [ring.middleware.params :as p]
+    [simple-compojure.middleware :as m]
+    [simple-compojure.routes :as r]
+    )
+  (:genclass))
+
+(def app
+  (-> r/routes
+      m/logger
+      m/req-res-displayer
+      p/wrap-params))
+
+(defonce server
+  (run-jetty #'app {:port 8080 :join? false}))

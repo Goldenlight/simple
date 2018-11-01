@@ -1,0 +1,833 @@
+;; Connected to nREPL server - nrepl://localhost:40381
+;; CIDER 0.15.0snapshot (package: 20170522.1437), nREPL 0.2.12
+;; Clojure 1.8.0, Java 1.7.0_181
+;;     Docs: (doc function-name)
+;;           (find-doc part-of-name)
+;;   Source: (source function-name)
+;;  Javadoc: (javadoc java-object-or-class)
+;;     Exit: <C-c C-q>
+;;  Results: Stored in vars *1, *2, *3, an exception in *e;
+;; ======================================================================
+;; If you're new to CIDER it is highly recommended to go through its
+;; manual first. Type <M-x cider-view-manual> to view it.
+;; In case you're seeing any warnings you should consult the manual's
+;; "Troubleshooting" section.
+;;
+;; Here are few tips to get you started:
+;;
+;; * Press <C-h m> to see a list of the keybindings available (this
+;;   will work in every Emacs buffer)
+;; * Press <,> to quickly invoke some REPL command
+;; * Press <C-c C-z> to switch between the REPL and a Clojure file
+;; * Press <M-.> to jump to the source of something (e.g. a var, a
+;;   Java method)
+;; * Press <C-c C-d C-d> to view the documentation for something (e.g.
+;;   a var, a Java method)
+;; * Enable `eldoc-mode' to display function & method signatures in the minibuffer.
+;; * Print CIDER's refcard and keep it close to your keyboard.
+;;
+;; CIDER is super customizable - try <M-x customize-group cider> to
+;; get a feel for this. If you're thirsty for knowledge you should try
+;; <M-x cider-drink-a-sip>.
+;;
+;; If you think you've encountered a bug (or have some suggestions for
+;; improvements) use <M-x cider-report-bug> to report it.
+;;
+;; Above all else - don't panic! In case of an emergency - procure
+;; some (hard) cider and enjoy it responsibly!
+;;
+;; You can remove this message with the `cider-repl-clear-help-banner' command.
+;; You can disable it from appearing on start by setting
+;; `cider-repl-display-help-banner' to nil.
+;; ======================================================================
+simple.core> (.stop server)
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: server in this context, compiling:(*cider-repl simple*:43:14) 
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+CompilerException java.lang.RuntimeException: No such var: rur/handle-dump, compiling:(simple/routes.clj:14:70) 
+nil
+nilCompilerException java.lang.RuntimeException: Unable to resolve symbol: server in this context, compiling:(simple/core.clj:10:1) 
+simple.core> (.stop server)
+CompilerException java.lang.RuntimeException: Unable to resolve symbol: server in this context, compiling:(*cider-repl simple*:49:14) 
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nilCompilerException java.lang.RuntimeException: Unable to resolve symbol: server in this context, compiling:(simple/core.clj:10:1) 
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nilCompilerException java.lang.RuntimeException: Unable to resolve symbol: server in this context, compiling:(simple/core.clj:13:3) 
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil2018-08-31 00:37:43.478:INFO:oejs.Server:nREPL-worker-4: jetty-9.2.10.v20150310
+2018-08-31 00:37:43.552:INFO:oejs.ServerConnector:nREPL-worker-4: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:37:43.554:INFO:oejs.Server:nREPL-worker-4: Started @424360ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x191e8301 "HttpInputOverHTTP@191e8301"],
+ :scheme :http,
+ :request-method :get}
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:22:44 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x191e8301 "HttpInputOverHTTP@191e8301"],
+ :scheme :http,
+ :request-method :get}
+
+simple.core> (.stop server)
+2018-08-31 00:41:20.992:INFO:oejs.ServerConnector:nREPL-worker-5: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 00:41:45.322:INFO:oejs.Server:nREPL-worker-5: jetty-9.2.10.v20150310
+2018-08-31 00:41:45.328:INFO:oejs.ServerConnector:nREPL-worker-5: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:41:45.328:INFO:oejs.Server:nREPL-worker-5: Started @666134ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundarykpyncZB3yBPmbeLQ",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundarykpyncZB3yBPmbeLQ",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x25acb490 "HttpInputOverHTTP@25acb490"],
+ :scheme :http,
+ :request-method :post}
+2018-08-31 00:42:05.908:WARN:oejs.HttpChannel:qtp93773657-38: /post-submit
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/post-submit&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:post</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">&quot;multipart/form-data; boundary=----WebKitFormBoundarykpyncZB3yBPmbeLQ&quot;</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">414</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;origin&quot; &quot;null&quot;, &quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;content-type&quot; &quot;multipart/form-data; boundary=----WebKitFormBoundarykpyncZB3yBPmbeLQ&quot;, &quot;content-length&quot; &quot;414&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;upgrade-insecure-requests&quot; &quot;1&quot;, &quot;accept&quot; &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=0&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x25acb490 &quot;HttpInputOverHTTP@25acb490&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:38:16 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x2cbdcaf6 "HttpInputOverHTTP@2cbdcaf6"],
+ :scheme :http,
+ :request-method :get}
+2018-08-31 00:42:06.455:WARN:oejs.HttpChannel:qtp93773657-40: /favicon.ico
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/favicon.ico&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:get</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;referer&quot; &quot;http://clojure.systems:36909/post-submit&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;if-modified-since&quot; &quot;Fri, 31 Aug 2018 00:38:16 GMT&quot;, &quot;accept&quot; &quot;image/webp,image/apng,image/*,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=259200&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x2cbdcaf6 &quot;HttpInputOverHTTP@2cbdcaf6&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+
+simple.core> (.stop server)
+2018-08-31 00:43:00.642:INFO:oejs.ServerConnector:nREPL-worker-6: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 00:43:07.506:INFO:oejs.Server:nREPL-worker-6: jetty-9.2.10.v20150310
+2018-08-31 00:43:07.512:INFO:oejs.ServerConnector:nREPL-worker-6: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:43:07.512:INFO:oejs.Server:nREPL-worker-6: Started @748318ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryDfLsZTselKhij6Rc",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryDfLsZTselKhij6Rc",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x3d3154fa "HttpInputOverHTTP@3d3154fa"],
+ :scheme :http,
+ :request-method :post}
+2018-08-31 00:43:23.212:WARN:oejs.HttpChannel:qtp93773657-50: /post-submit
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/post-submit&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:post</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">&quot;multipart/form-data; boundary=----WebKitFormBoundaryDfLsZTselKhij6Rc&quot;</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">414</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;origin&quot; &quot;null&quot;, &quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;content-type&quot; &quot;multipart/form-data; boundary=----WebKitFormBoundaryDfLsZTselKhij6Rc&quot;, &quot;content-length&quot; &quot;414&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;upgrade-insecure-requests&quot; &quot;1&quot;, &quot;accept&quot; &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=0&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x3d3154fa &quot;HttpInputOverHTTP@3d3154fa&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:38:16 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x5cb9fd6f "HttpInputOverHTTP@5cb9fd6f"],
+ :scheme :http,
+ :request-method :get}
+2018-08-31 00:43:23.818:WARN:oejs.HttpChannel:qtp93773657-52: /favicon.ico
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/favicon.ico&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:get</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;referer&quot; &quot;http://clojure.systems:36909/post-submit&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;if-modified-since&quot; &quot;Fri, 31 Aug 2018 00:38:16 GMT&quot;, &quot;accept&quot; &quot;image/webp,image/apng,image/*,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=259200&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x5cb9fd6f &quot;HttpInputOverHTTP@5cb9fd6f&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+
+simple.core> (.stop server)
+2018-08-31 00:47:19.961:INFO:oejs.ServerConnector:nREPL-worker-7: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 00:47:27.073:INFO:oejs.Server:nREPL-worker-7: jetty-9.2.10.v20150310
+2018-08-31 00:47:27.078:INFO:oejs.ServerConnector:nREPL-worker-7: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:47:27.079:INFO:oejs.Server:nREPL-worker-7: Started @1007885ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryMyNrESRrz0wWrZdL",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryMyNrESRrz0wWrZdL",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x64048fcb "HttpInputOverHTTP@64048fcb"],
+ :scheme :http,
+ :request-method :post}
+2018-08-31 00:47:41.069:WARN:oejs.HttpChannel:qtp93773657-62: /post-submit
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/post-submit&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:post</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">&quot;multipart/form-data; boundary=----WebKitFormBoundaryMyNrESRrz0wWrZdL&quot;</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">414</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;origin&quot; &quot;null&quot;, &quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;content-type&quot; &quot;multipart/form-data; boundary=----WebKitFormBoundaryMyNrESRrz0wWrZdL&quot;, &quot;content-length&quot; &quot;414&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;upgrade-insecure-requests&quot; &quot;1&quot;, &quot;accept&quot; &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=0&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x64048fcb &quot;HttpInputOverHTTP@64048fcb&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:38:16 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x795aa654 "HttpInputOverHTTP@795aa654"],
+ :scheme :http,
+ :request-method :get}
+2018-08-31 00:47:41.658:WARN:oejs.HttpChannel:qtp93773657-64: /favicon.ico
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/favicon.ico&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:get</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;referer&quot; &quot;http://clojure.systems:36909/post-submit&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;if-modified-since&quot; &quot;Fri, 31 Aug 2018 00:38:16 GMT&quot;, &quot;accept&quot; &quot;image/webp,image/apng,image/*,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=259200&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x795aa654 &quot;HttpInputOverHTTP@795aa654&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+
+simple.core> (.stop server)
+2018-08-31 00:50:20.590:INFO:oejs.ServerConnector:nREPL-worker-8: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+CompilerException java.lang.RuntimeException: Map literal must contain an even number of forms, compiling:(simple/routes.clj:15:26) 
+nil
+nil
+nil
+simple.core> (.stop server)
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 00:51:38.133:INFO:oejs.Server:nREPL-worker-9: jetty-9.2.10.v20150310
+2018-08-31 00:51:38.141:INFO:oejs.ServerConnector:nREPL-worker-9: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:51:38.149:INFO:oejs.Server:nREPL-worker-9: Started @1258955ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryzuNomRfnku6fHGs4",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryzuNomRfnku6fHGs4",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x685b5a62 "HttpInputOverHTTP@685b5a62"],
+ :scheme :http,
+ :request-method :post}
+2018-08-31 00:52:12.366:WARN:oejs.HttpChannel:qtp93773657-75: /post-submit
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/post-submit&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:post</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">&quot;multipart/form-data; boundary=----WebKitFormBoundaryzuNomRfnku6fHGs4&quot;</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">414</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;origin&quot; &quot;null&quot;, &quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;content-type&quot; &quot;multipart/form-data; boundary=----WebKitFormBoundaryzuNomRfnku6fHGs4&quot;, &quot;content-length&quot; &quot;414&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;upgrade-insecure-requests&quot; &quot;1&quot;, &quot;accept&quot; &quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=0&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x685b5a62 &quot;HttpInputOverHTTP@685b5a62&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:38:16 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x2d5b453 "HttpInputOverHTTP@2d5b453"],
+ :scheme :http,
+ :request-method :get}
+2018-08-31 00:52:12.911:WARN:oejs.HttpChannel:qtp93773657-77: /favicon.ico
+java.lang.Exception: Unrecognized body: {:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">36909</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">&quot;clojure.systems&quot;</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">&quot;2600:1011:b12c:78bd:85a4:52e3:3e00:8a46&quot;</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">&quot;/favicon.ico&quot;</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">:http</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">:get</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">{&quot;via&quot; &quot;1.1 localhost (squid/4.2)&quot;, &quot;host&quot; &quot;clojure.systems:36909&quot;, &quot;user-agent&quot; &quot;Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36&quot;, &quot;referer&quot; &quot;http://clojure.systems:36909/post-submit&quot;, &quot;connection&quot; &quot;keep-alive&quot;, &quot;if-modified-since&quot; &quot;Fri, 31 Aug 2018 00:38:16 GMT&quot;, &quot;accept&quot; &quot;image/webp,image/apng,image/*,*/*;q=0.8&quot;, &quot;accept-language&quot; &quot;en-US,en;q=0.9&quot;, &quot;x-forwarded-for&quot; &quot;192.168.1.10&quot;, &quot;accept-encoding&quot; &quot;gzip, deflate&quot;, &quot;cache-control&quot; &quot;max-age=259200&quot;}</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">#object[org.eclipse.jetty.server.HttpInputOverHTTP 0x2d5b453 &quot;HttpInputOverHTTP@2d5b453&quot;]</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:protocol</td><td class=\"val\">&quot;HTTP/1.1&quot;</td></tr></tr></tbody></table></div></body></html>"}
+	at ring.util.servlet$set_body.invokeStatic(servlet.clj:105)
+	at ring.util.servlet$set_body.invoke(servlet.clj:84)
+	at ring.util.servlet$update_servlet_response.invokeStatic(servlet.clj:115)
+	at ring.util.servlet$update_servlet_response.invoke(servlet.clj:107)
+	at ring.adapter.jetty$proxy_handler$fn__100.invoke(jetty.clj:26)
+	at ring.adapter.jetty.proxy$org.eclipse.jetty.server.handler.AbstractHandler$ff19274a.handle(Unknown Source)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:748)
+
+simple.core> (rhd/handle-dump 'aaa)
+CompilerException java.lang.RuntimeException: No such namespace: rhd, compiling:(*cider-repl simple*:556:14) 
+simple.core> (ring.handler.dump/handle-dump {a1: 1, :b2 2})
+RuntimeException Invalid token: a1:  clojure.lang.Util.runtimeException (Util.java:221)
+1
+:b2
+2RuntimeException Unmatched delimiter: }  clojure.lang.Util.runtimeException (Util.java:221)
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)
+simple.core> (ring.handler.dump/handle-dump {:a1 1, :b2 2})
+{:a1 1, :b2 2}
+
+{:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">nil</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:a1</td><td class=\"val\">1</td></tr><tr><td class=\"key\">:b2</td><td class=\"val\">2</td></tr></tr></tbody></table></div></body></html>"}
+simple.core> (ring.handler.dump/handle-dump {:a1 1, :b2 2})
+{:a1 1, :b2 2}
+
+{:status 200, :headers {"Content-Type" "text/html"}, :body "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Ring: Request Dump</title><style type=\"text/css\">/*\nCopyright (c) 2008, Yahoo! Inc. All rights reserved.\nCode licensed under the BSD License:\nhttp://developer.yahoo.net/yui/license.txt\nversion: 2.6.0\n*/\nhtml{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}\n\nh3.info {\n font-size: 1.6em; \n margin-left: 1em;\n padding-top: .5em;\n padding-bottom: .5em;\n}\n\ntable.request {\n  font-size: 1.1em;\n  width: 800px;\n  margin-left: 1em;\n  margin-right: 1em;\n  background: lightgrey;\n}\n\ntable.request tr {\n  line-height: 1.4em;\n}\n\ntable.request td.key {\n  padding-left: .5em;\n  text-aligh: left;\n  width: 150px;\n}\n\ntable.request td.val {\n  text-align: left;\n}\n</style></head><body><div id=\"content\"><h3 class=\"info\">Ring Request Values</h3><table class=\"request\"><tbody><tr><td class=\"key\">:server-port</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:server-name</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:remote-addr</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:uri</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:query-string</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:scheme</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:request-method</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-type</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:content-length</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:character-encoding</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:ssl-client-cert</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:headers</td><td class=\"val\">nil</td></tr><tr><td class=\"key\">:body</td><td class=\"val\">nil</td></tr></tbody></table><br /><table class=\"request user\"><tbody><tr><tr><td class=\"key\">:a1</td><td class=\"val\">1</td></tr><tr><td class=\"key\">:b2</td><td class=\"val\">2</td></tr></tr></tbody></table></div></body></html>"}
+simple.core> (.stop server)
+2018-08-31 00:58:07.561:INFO:oejs.ServerConnector:nREPL-worker-13: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 00:58:17.265:INFO:oejs.Server:nREPL-worker-13: jetty-9.2.10.v20150310
+2018-08-31 00:58:17.275:INFO:oejs.ServerConnector:nREPL-worker-13: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 00:58:17.276:INFO:oejs.Server:nREPL-worker-13: Started @1658082ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryWAUj9l0nkskt7Gj2",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryWAUj9l0nkskt7Gj2",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x4649f780 "HttpInputOverHTTP@4649f780"],
+ :scheme :http,
+ :request-method :post}
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:38:16 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x4649f780 "HttpInputOverHTTP@4649f780"],
+ :scheme :http,
+ :request-method :get}
+
+simple.core> 
+simple.core> 
+simple.core> 
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryXiFyHFWGc7yI2BRB",
+  "content-length" "731",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 731,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryXiFyHFWGc7yI2BRB",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x283046a9 "HttpInputOverHTTP@283046a9"],
+ :scheme :http,
+ :request-method :post}
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "if-modified-since" "Fri, 31 Aug 2018 00:58:48 GMT",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x283046a9 "HttpInputOverHTTP@283046a9"],
+ :scheme :http,
+ :request-method :get}
+
+simple.core> (.stop server)
+2018-08-31 17:21:19.439:INFO:oejs.ServerConnector:nREPL-worker-15: Stopped ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+CompilerException java.lang.RuntimeException: Unmatched delimiter: ), compiling:(simple/routes.clj:16:17) 
+nil
+nil
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+CompilerException java.lang.RuntimeException: Unmatched delimiter: ), compiling:(simple/routes.clj:16:21) 
+nil
+nil
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+CompilerException java.lang.RuntimeException: Unmatched delimiter: ), compiling:(simple/routes.clj:16:21) 
+nil
+nil
+nil
+simple.core> (load "routes") (load "views") (load "middleware") (load "core")
+nil
+nil
+nil
+nil
+simple.core> (-main)
+core.clj in -main running defonce server
+2018-08-31 17:25:13.972:INFO:oejs.Server:nREPL-worker-18: jetty-9.2.10.v20150310
+2018-08-31 17:25:13.978:INFO:oejs.ServerConnector:nREPL-worker-18: Started ServerConnector@749f46ba{HTTP/1.1}{0.0.0.0:36909}
+2018-08-31 17:25:13.978:INFO:oejs.Server:nREPL-worker-18: Started @60874784ms
+nil
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"origin" "null",
+  "via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryCQjMYSSN1Aq65wni",
+  "content-length" "414",
+  "connection" "keep-alive",
+  "upgrade-insecure-requests" "1",
+  "accept"
+  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=0"},
+ :server-port 36909,
+ :content-length 414,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryCQjMYSSN1Aq65wni",
+ :character-encoding nil,
+ :uri "/post-submit",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP
+ 0x1e7ae447 "HttpInputOverHTTP@1e7ae447"],
+ :scheme :http,
+ :request-method :post}
+:ssl-client-cert nil
+:protocol HTTP/1.1
+:remote-addr 2600:1011:b12c:78bd:85a4:52e3:3e00:8a46
+:headers {origin null, via 1.1 localhost (squid/4.2), host clojure.systems:36909, user-agent Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36, content-type multipart/form-data; boundary=----WebKitFormBoundaryCQjMYSSN1Aq65wni, content-length 414, connection keep-alive, upgrade-insecure-requests 1, accept text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8, accept-language en-US,en;q=0.9, x-forwarded-for 192.168.1.10, accept-encoding gzip, deflate, cache-control max-age=0}
+:server-port 36909
+:content-length 414
+:content-type multipart/form-data; boundary=----WebKitFormBoundaryCQjMYSSN1Aq65wni
+:character-encoding nil
+:uri /post-submit
+:server-name clojure.systems
+:query-string nil
+:body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1e7ae447 HttpInputOverHTTP@1e7ae447]
+:scheme :http
+:request-method :post
+{:ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "2600:1011:b12c:78bd:85a4:52e3:3e00:8a46",
+ :headers
+ {"via" "1.1 localhost (squid/4.2)",
+  "host" "clojure.systems:36909",
+  "user-agent"
+  "Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
+  "referer" "http://clojure.systems:36909/post-submit",
+  "connection" "keep-alive",
+  "accept" "image/webp,image/apng,image/*,*/*;q=0.8",
+  "accept-language" "en-US,en;q=0.9",
+  "x-forwarded-for" "192.168.1.10",
+  "accept-encoding" "gzip, deflate",
+  "cache-control" "max-age=259200"},
+ :server-port 36909,
+ :content-length nil,
+ :content-type nil,
+ :character-encoding nil,
+ :uri "/favicon.ico",
+ :server-name "clojure.systems",
+ :query-string nil,
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1e7ae447 "HttpInputOverHTTP@1e7ae447"],
+ :scheme :http,
+ :request-method :get}
+:ssl-client-cert nil
+:protocol HTTP/1.1
+:remote-addr 2600:1011:b12c:78bd:85a4:52e3:3e00:8a46
+:headers {via 1.1 localhost (squid/4.2), host clojure.systems:36909, user-agent Mozilla/5.0 (X11; CrOS x86_64 10575.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36, referer http://clojure.systems:36909/post-submit, connection keep-alive, accept image/webp,image/apng,image/*,*/*;q=0.8, accept-language en-US,en;q=0.9, x-forwarded-for 192.168.1.10, accept-encoding gzip, deflate, cache-control max-age=259200}
+:server-port 36909
+:content-length nil
+:content-type nil
+:character-encoding nil
+:uri /favicon.ico
+:server-name clojure.systems
+:query-string nil
+:body #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1e7ae447 HttpInputOverHTTP@1e7ae447]
+:scheme :http
+:request-method :get
+simple.core> (simple.views/showbody {:a1 1, :b2:2})
+RuntimeException Map literal must contain an even number of forms  clojure.lang.Util.runtimeException (Util.java:221)
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)
+simple.core> (simple.views/showbody {:a1 1, :b2:2})
+RuntimeException Map literal must contain an even number of forms  clojure.lang.Util.runtimeException (Util.java:221)
+RuntimeException Unmatched delimiter: )  clojure.lang.Util.runtimeException (Util.java:221)
+simple.core> (simple.views/showbody {:a1 1, :b2 2})
